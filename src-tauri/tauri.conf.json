@@ -7,6 +7,7 @@
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "npm run build",
+    "beforeBundleCommand": "node ./src-tauri/scripts/clean-bundle.cjs",
     "frontendDist": "../dist"
   },
   "app": {
@@ -30,6 +31,18 @@
   "bundle": {
     "active": true,
     "targets": "all",
+    "windows": {
+      "wix": {
+        "language": "zh-CN"
+      },
+      "nsis": {
+        "template": "nsis/installer.nsi",
+        "installerIcon": "icons/icon.ico",
+        "languages": ["SimpChinese"],
+        "displayLanguageSelector": false,
+        "installMode": "perMachine"
+      }
+    },
     "icon": [
       "icons/32x32.png",
       "icons/64x64.png",

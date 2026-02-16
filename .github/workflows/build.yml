@@ -19,24 +19,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: npm
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
 
-
-
       - name: Install frontend dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build App
         run: npm run tauri build
         env:
-          # If you don't have a signing key yet, you might need to skip signing or use test keys.
-          # For basic builds, this is usually fine.
-          # To disable bundle signing if configured:
-          # TAURI_SIGNING_PRIVATE_KEY: "" 
-          # TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ""
           CI: true
 
       - name: Upload artifacts
