@@ -1,6 +1,6 @@
 <div align="center">
 
-# ![Font Manager](src-tauri/icons/128x128@2x.png) Font Manager
+<img src="src-tauri/icons/128x128@2x.png" alt="图标" width="40">Font Manager
 ### 现代化的字体管理专家
 
 [![License](https://img.shields.io/badge/license-AGPLv3-blue?style=flat-square)](LICENSE)
