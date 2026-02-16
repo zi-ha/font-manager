@@ -47,7 +47,7 @@ ${StrLoc}
 !endif
 !ifndef INSTALLERICON
   ; Fallback if Tauri doesn't define it (should be defined by Tauri)
-  !define INSTALLERICON "icons\icon.ico"
+  !define INSTALLERICON "..\..\..\..\icons\icon.ico"
 !endif
 !ifndef SIDEBARIMAGE
   !define SIDEBARIMAGE ""
@@ -59,7 +59,7 @@ ${StrLoc}
   !define MAINBINARYNAME "font-manager"
 !endif
 !ifndef MAINBINARYSRCPATH
-  !define MAINBINARYSRCPATH "..\..\..\target\release\font-manager.exe"
+  !define MAINBINARYSRCPATH "..\..\font-manager.exe"
 !endif
 !ifndef BUNDLEID
   !define BUNDLEID "com.font-manager.app"

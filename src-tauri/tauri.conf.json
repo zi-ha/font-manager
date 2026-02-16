@@ -37,7 +37,6 @@
       },
       "nsis": {
         "template": "nsis/installer.nsi",
-        "installerIcon": "icons/icon.ico",
         "languages": ["SimpChinese"],
         "displayLanguageSelector": false,
         "installMode": "perMachine"
