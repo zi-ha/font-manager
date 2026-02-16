@@ -46,7 +46,8 @@ ${StrLoc}
   !define LICENSE ""
 !endif
 !ifndef INSTALLERICON
-  !define INSTALLERICON "D:\Desktop\font-manager\src-tauri\icons\icon.ico"
+  ; Fallback if Tauri doesn't define it (should be defined by Tauri)
+  !define INSTALLERICON "icons\icon.ico"
 !endif
 !ifndef SIDEBARIMAGE
   !define SIDEBARIMAGE ""
@@ -58,7 +59,7 @@ ${StrLoc}
   !define MAINBINARYNAME "font-manager"
 !endif
 !ifndef MAINBINARYSRCPATH
-  !define MAINBINARYSRCPATH "D:\Desktop\font-manager\src-tauri\target\release\font-manager.exe"
+  !define MAINBINARYSRCPATH "..\..\..\target\release\font-manager.exe"
 !endif
 !ifndef BUNDLEID
   !define BUNDLEID "com.font-manager.app"
@@ -73,7 +74,7 @@ ${StrLoc}
   !define ARCH "x64"
 !endif
 !ifndef ADDITIONALPLUGINSPATH
-  !define ADDITIONALPLUGINSPATH "C:\Users\wuzih\AppData\Local\tauri\NSIS\Plugins\x86-unicode\additional"
+  !define ADDITIONALPLUGINSPATH ""
 !endif
 !ifndef ALLOWDOWNGRADES
   !define ALLOWDOWNGRADES "true"
@@ -135,7 +136,9 @@ VIAddVersionKey "LegalCopyright" "${COPYRIGHT}"
 VIAddVersionKey "FileVersion" "${VERSION}"
 VIAddVersionKey "ProductVersion" "${VERSION}"
 
-!addplugindir "${ADDITIONALPLUGINSPATH}"
+!if "${ADDITIONALPLUGINSPATH}" != ""
+  !addplugindir "${ADDITIONALPLUGINSPATH}"
+!endif
 
 !if "${UNINSTALLERSIGNCOMMAND}" != ""
   !uninstfinalize '${UNINSTALLERSIGNCOMMAND}'
@@ -418,7 +421,7 @@ FunctionEnd
 
 !insertmacro MUI_LANGUAGE "SimpChinese"
 !insertmacro MUI_RESERVEFILE_LANGDLL
-!include "D:\Desktop\font-manager\src-tauri\target\release\nsis\x64\SimpChinese.nsh"
+!include "SimpChinese.nsh"
 
 Function .onInit
   ${GetOptions} $CMDLINE "/P" $PassiveMode
