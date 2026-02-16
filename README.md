@@ -1,6 +1,8 @@
 <div align="center">
 
-# <img src="docs/assets/icon.png" width="64" height="64" alt="Icon" style="vertical-align: middle; margin-right: 10px;"> Font Manager
+<img src="docs/assets/icon.png" width="128" height="128" alt="Font Manager Icon" style="margin-bottom: 20px;">
+
+# Font Manager
 ### 现代化的跨平台字体管理专家
 
 [![License](https://img.shields.io/badge/license-AGPLv3-blue?style=flat-square)](LICENSE)
