@@ -136,8 +136,3 @@
 4.  推送到分支 (`git push origin feature/AmazingFeature`)
 5.  提交 Pull Request
 
----
-
-<div align="center">
-  <p>Made with ❤️ by <a href="https://github.com/yourusername">Your Name</a></p>
-</div>
