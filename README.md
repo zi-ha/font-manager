@@ -1,7 +1,7 @@
 <div align="center">
 
-<img src="src-tauri/icons/128x128@2x.png" alt="图标" width="40">Font Manager
-### 现代化的字体管理专家
+# <img src="docs/assets/icon.png" width="64" height="64" alt="Icon" style="vertical-align: middle; margin-right: 10px;"> Font Manager
+### 现代化的跨平台字体管理专家
 
 [![License](https://img.shields.io/badge/license-AGPLv3-blue?style=flat-square)](LICENSE)
 [![Tauri](https://img.shields.io/badge/Tauri-2.0-orange?style=flat-square&logo=tauri)](https://tauri.app)
